@@ -26,6 +26,7 @@ option java_outer_classname = "EntityWrenchProtos";
 
 import "gz/msgs/entity.proto";
 import "gz/msgs/header.proto";
+import "gz/msgs/pose.proto";
 import "gz/msgs/wrench.proto";
 
 message EntityWrench
@@ -38,4 +39,7 @@ message EntityWrench
 
   /// \brief Wrench to apply.
   Wrench wrench = 3;
+
+  /// \brief Pose of the location where wrench is to be applied (world frame).
+  Pose pose     = 4;
 }
